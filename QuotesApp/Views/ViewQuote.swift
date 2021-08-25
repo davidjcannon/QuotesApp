@@ -12,6 +12,7 @@ struct ViewQuote: View {
     var quote:Quote
     
     var body: some View {
+        
         ZStack {
         Image(quote.author)
             .brightness(0.2)
@@ -32,6 +33,7 @@ struct ViewQuote: View {
         }
             .foregroundColor(Color.black)
     }
+        
 }
 
 struct ViewQuote_Previews: PreviewProvider {
