@@ -15,20 +15,25 @@ struct ViewQuote: View {
         
         ZStack {
         Image(quote.author)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: 1000.0, height: 1000.0)
             .brightness(0.2)
             .blur(radius: 5)
             VStack {
                 Text(quote.author)
-                    .font(.system(size: 55))
                     .fontWeight(.bold)
-                    .bold()
+                    .font(.system(size: 55))
+                    .multilineTextAlignment(.center)
+                    .frame(width: 370)
                 
                 ForEach (quote.quoteList, id: \.self) { quote in
                     Text("\"" + quote + "\"")
                         .font(.system(size: 20))
                         .fontWeight(.medium)
-                        .frame(width: 370, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .padding(.vertical, 14.0)
+                        .padding(.horizontal, 8.0)
+                        .frame(width: 370, alignment: .center)
                 }
         }
             .foregroundColor(Color.black)
@@ -40,7 +45,7 @@ struct ViewQuote_Previews: PreviewProvider {
     static var previews: some View {
         let model = QuoteModel()
         
-        ViewQuote(quote: model.Quotes[2])
+        ViewQuote(quote: model.Quotes[1])
     }
 }
 }

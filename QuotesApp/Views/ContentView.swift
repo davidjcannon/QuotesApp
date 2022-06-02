@@ -37,8 +37,7 @@ struct ContentView: View {
                     }
                     if (self.pressed == 0) {
                     Button("Made By David Cannon") {
-                        // Adds picture of me and Helena
-                        model.Quotes.append(Quote(id: UUID(), quoteList: ["I love you", "You make me feel complete","We're halves"], author: "David Cannon"))
+                        model.Quotes.append(Quote(id: UUID(), quoteList: ["If I wanna be great, I don't wanna be me", "You can give sight to the blind but you can't force them to see", "Love's the death of peace of mind"], author: "Bad Omens"))
                             self.pressed = 1
                         }
                     }

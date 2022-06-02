@@ -31,7 +31,7 @@ struct QuoteCard: View {
                     Text("- " + quote.author)
                 }
                 .foregroundColor(.white)
-                .shadow(color: .black, radius: 10, x: 2, y: 2)
+                .shadow(color: .black, radius: 3, x: 2, y: 2)
                 .padding(.horizontal, 35.0)
             }
             
